@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 from tkcalendar import Calendar, DateEntry
+from tkinter.scrolledtext import *
+from tkinter import messagebox
 
 #Structure and  Layout
 window = Tk()
@@ -66,7 +68,7 @@ entry_email.grid(row=3, column=1)
 
 l4 = Label(tab1, text="Age", padx=5, pady=5)
 l4.grid(column=0, row=4)
-age_raw_entry = StringVar()
+age_raw_entry = IntVar()
 entry_age = Entry(tab1, textvariable=age_raw_entry, width=50)
 entry_age.grid(row=4, column=1)
 
@@ -85,9 +87,23 @@ entry_adress.grid(row=6, column=1)
 
 l7 = Label(tab1, text="Phone Number", padx=5, pady=5)
 l7.grid(column=0, row=7)
-pnumber_raw_entry = StringVar()
+pnumber_raw_entry = IntVar()
 entry_pnumber = Entry(tab1, textvariable=pnumber_raw_entry, width=50)
 entry_pnumber.grid(row=7, column=1)
+
+Btn1 = Button(tab1, text="Add", width=12, bg="#03A9F4", fg="#fff")
+Btn1.grid(row=8, column=0, padx=5, pady=5)
+
+Btn2 = Button(tab1, text="Clear", width=12, bg="#03A9F4", fg="#fff")
+Btn2.grid(row=8, column=1, padx=5, pady=5)
+
+# Display Screen
+
+tab1_display = ScrolledText(tab1, height=5)
+tab1_display.grid(row=10, column=1, padx=5, pady=5, columnspan=3)
+
+Btn3 = Button(tab1, text="Clear Result", width=12, bg="#03A9F4", fg="#fff")
+Btn3.grid(row=12, column=1, padx=10, pady=10)
 # View
 
 # Search
