@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
+from tkcalendar import Calendar, DateEntry
 
 #Structure and  Layout
 window = Tk()
@@ -51,6 +52,42 @@ fname_raw_entry = StringVar()
 entry_fname = Entry(tab1, textvariable=fname_raw_entry, width=50)
 entry_fname.grid(row=1, column=1)
 
+l2 = Label(tab1, text="Last Name", padx=5, pady=5)
+l2.grid(column=0, row=2)
+lname_raw_entry = StringVar()
+entry_lname = Entry(tab1, textvariable=lname_raw_entry, width=50)
+entry_lname.grid(row=2, column=1)
+
+l3 = Label(tab1, text="Email", padx=5, pady=5)
+l3.grid(column=0, row=3)
+email_raw_entry = StringVar()
+entry_email = Entry(tab1, textvariable=email_raw_entry, width=50)
+entry_email.grid(row=3, column=1)
+
+l4 = Label(tab1, text="Age", padx=5, pady=5)
+l4.grid(column=0, row=4)
+age_raw_entry = StringVar()
+entry_age = Entry(tab1, textvariable=age_raw_entry, width=50)
+entry_age.grid(row=4, column=1)
+
+l5 = Label(tab1, text="Date of Birth", padx=5, pady=5)
+l5.grid(column=0, row=5)
+dob_raw_entry = StringVar()
+cal = DateEntry(tab1,  width=30, textvariable=dob_raw_entry,
+                background='darkblue', foreground='white', borderwidth=2, year=2019)
+cal.grid(row=5, column=1, padx=10, pady=10)
+
+l6 = Label(tab1, text="Adress", padx=5, pady=5)
+l6.grid(column=0, row=6)
+adress_raw_entry = StringVar()
+entry_adress = Entry(tab1, textvariable=adress_raw_entry, width=50)
+entry_adress.grid(row=6, column=1)
+
+l7 = Label(tab1, text="Phone Number", padx=5, pady=5)
+l7.grid(column=0, row=7)
+pnumber_raw_entry = StringVar()
+entry_pnumber = Entry(tab1, textvariable=pnumber_raw_entry, width=50)
+entry_pnumber.grid(row=7, column=1)
 # View
 
 # Search
